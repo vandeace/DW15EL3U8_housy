@@ -1,0 +1,136 @@
+{
+  "Property": [
+    {
+      "picture": "/pictures/1.png",
+      "name": "Rumah Gede",
+      "city": "Tangerang Selatan",
+      "address": "Pondok Aren",
+      "price": "80.000.000",
+      "typeRent": "Year",
+      "amenities": "Furnished",
+      "bedroom": "4",
+      "bathroom": "3"
+    },
+    {
+      "picture": "/pictures/2.png",
+      "name": "Rumah Besar",
+      "city": "Palembang",
+      "address": "Jl.Nangka",
+      "price": "8000000",
+      "typeRent": "Year",
+      "amenities": "Furnished",
+      "bedroom": "4",
+      "bathroom": "3"
+    },
+    {
+      "picture": "/pictures/3.png",
+      "name": "Rumah Gede",
+      "city": "Pekanbaru",
+      "address": "Jl.Tuanku Tambusai",
+      "price": "8000000",
+      "typeRent": "Year",
+      "amenities": "Furnished",
+      "bedroom": "4",
+      "bathroom": "3"
+    },
+    {
+      "picture": "/pictures/4.png",
+      "name": "Rumah Gede",
+      "city": "Pekanbaru",
+      "address": "Jl.Tuanku Tambusai",
+      "price": "8000000",
+      "typeRent": "Year",
+      "amenities": "Furnished",
+      "bedroom": "4",
+      "bathroom": "3"
+    },
+    {
+      "picture": "/pictures/5.png",
+      "name": "Rumah Gede",
+      "city": "Pekanbaru",
+      "address": "Nangka",
+      "price": "8000000",
+      "typeRent": "Year",
+      "amenities": "Furnished",
+      "bedroom": "4",
+      "bathroom": "3"
+    },
+    {
+      "picture": "/pictures/6.png",
+      "name": "Rumah Gede",
+      "city": "Pekanbaru",
+      "address": "Jl.Tuanku Tambusai",
+      "price": "8000000",
+      "typeRent": "Year",
+      "amenities": "Furnished",
+      "bedroom": "4",
+      "bathroom": "3"
+    },
+    {
+      "picture": "/pictures/6.png",
+      "name": "Rumah Gede",
+      "city": "Pekanbaru",
+      "address": "Jl.Tuanku Tambusai",
+      "price": "8000000",
+      "typeRent": "Year",
+      "amenities": "Furnished",
+      "bedroom": "4",
+      "bathroom": "3"
+    },
+    {
+      "picture": "/pictures/6.png",
+      "name": "Rumah Gede",
+      "city": "Pekanbaru",
+      "address": "Jl.Tuanku Tambusai",
+      "price": "8000000",
+      "typeRent": "Year",
+      "amenities": "Furnished",
+      "bedroom": "4",
+      "bathroom": "3"
+    },
+    {
+      "picture": "/pictures/6.png",
+      "name": "Rumah Gede",
+      "city": "Pekanbaru",
+      "address": "Jl.Tuanku Tambusai",
+      "price": "8000000",
+      "typeRent": "Year",
+      "amenities": "Furnished",
+      "bedroom": "4",
+      "bathroom": "3"
+    },
+    {
+      "picture": "/pictures/6.png",
+      "name": "Rumah Gede",
+      "city": "Pekanbaru",
+      "address": "Jl.Tuanku Tambusai",
+      "price": "8000000",
+      "typeRent": "Year",
+      "amenities": "Furnished",
+      "bedroom": "4",
+      "bathroom": "3"
+    },
+    {
+      "picture": "/pictures/6.png",
+      "name": "Rumah Gede",
+      "city": "Pekanbaru",
+      "address": "Jl.Tuanku Tambusai",
+      "price": "8000000",
+      "typeRent": "Year",
+      "amenities": "Furnished",
+      "bedroom": "4",
+      "bathroom": "3"
+    },
+    {
+      "picture": "/pictures/6.png",
+      "name": "Rumah Gede",
+      "city": "Pekanbaru",
+      "address": "Jl.Tuanku Tambusai",
+      "price": "8000000",
+      "typeRent": "Year",
+      "amenities": "Furnished",
+      "bedroom": "4",
+      "bathroom": "3"
+    }
+  ]
+}
