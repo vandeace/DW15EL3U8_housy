@@ -1,0 +1,8 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-bg {
+  background: rgba(196, 196, 196, 0.25);
+}

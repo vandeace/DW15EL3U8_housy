@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import User from '../pic/user.png';
-import { Container, Row, Col, Button, Form } from 'react-bootstrap';
+import { Container, Row, Col, Button, Form, Modal } from 'react-bootstrap';
 import Photo from '../pic/profile.png';
 import Email from '../pic/email.png';
 import Pass from '../pic/password.png';
@@ -11,9 +11,16 @@ import Address from '../pic/address.png';
 import Header from './header';
 
 export default class Profile extends Component {
-  constructor() {
-    super();
-  }
+  state = {
+    modal: false,
+  };
+  showModal = () => {
+    this.setState({ modal: true });
+  };
+  closeModal = () => {
+    this.setState({ modal: false });
+  };
+
   render() {
     return (
       <div>
@@ -68,9 +75,7 @@ export default class Profile extends Component {
                 <Col md={6} style={{ marginLeft: '20px' }}>
                   <Row style={{ fontSize: 'Large' }}>
                     <a>
-                      <label onClick={this.props.changePass}>
-                        Change Password
-                      </label>
+                      <label onClick={this.showModal}>Change Password</label>
                     </a>
                   </Row>
                   <Row style={{ fontSize: 'Small' }}>Password</Row>
@@ -144,6 +149,35 @@ export default class Profile extends Component {
             </Button>
           </div>
         </div>
+        <Modal show={this.state.modal} onHide={this.closeModal}>
+          <Modal.Header closeButton>CHANGE PASSWORD</Modal.Header>
+          <Modal.Body>
+            <Form.Group controlId='oldPassword'>
+              <Form.Label>Old Password</Form.Label>
+              <Form.Control type='password' placeholder='Input Old Password' />
+            </Form.Group>
+            <Form.Group controlId='newPassword'>
+              <Form.Label>New Password</Form.Label>
+              <Form.Control type='password' placeholder='Input New Password' />
+            </Form.Group>
+            <Form.Group controlId='confirmPassword'>
+              <Form.Label>Confirm Password</Form.Label>
+              <Form.Control
+                type='password'
+                placeholder='Confirm New Password'
+              />
+            </Form.Group>
+            <Form.Group>
+              <Button
+                variant='primary'
+                style={{ marginLeft: '150px' }}
+                onClick={this.closeModal}
+              >
+                SAVE CHANGES
+              </Button>
+            </Form.Group>
+          </Modal.Body>
+        </Modal>
       </div>
     );
   }

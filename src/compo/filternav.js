@@ -1,31 +1,27 @@
 import React, { Component } from 'react';
-import { Form, Button, Container } from 'react-bootstrap';
-import DatePicker from 'react-datepicker';
+import '../style/filter.css';
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 export default class Filter extends Component {
-  state = {
-    startDate: new Date(),
-  };
-
-  handleChange = (date) => {
-    this.setState({
-      startDate: date,
-    });
-  };
-
   render() {
     return (
       <Container style={{ marginTop: '20px' }}>
         <Form>
-          <h2>Type of Rent</h2>
-          <Button variant='outline-secondary'>Date</Button>{' '}
-          <Button variant='outline-secondary'>Month</Button>{' '}
-          <Button variant='outline-secondary'>Year</Button> <h2>Date</h2>
-          <DatePicker
-            selected={this.state.startDate}
-            onChange={this.handleChange}
-          />
-          <h2>Property Room</h2>
+          <h2 className='filter-bold-text'>Type of Rent</h2>
+          <Button className='btn' variant='outline-secondary'>
+            Date
+          </Button>{' '}
+          <Button className='btn' variant='outline-secondary'>
+            Month
+          </Button>{' '}
+          <Button className='btn' variant='outline-secondary'>
+            Year
+          </Button>
+          <h2 lassName='filter-bold-text'>Date</h2>
+          <Form.Group controlId='filterDate'>
+            <Form.Control type='date' required />
+          </Form.Group>
+          <h2 className='filter-bold-text'>Property Room</h2>
           <label />
           Bedroom
           <br />
@@ -41,7 +37,7 @@ export default class Filter extends Component {
           <Button variant='outline-secondary'>3</Button>{' '}
           <Button variant='outline-secondary'>4</Button>{' '}
           <Button variant='outline-secondary'>5</Button> <br />
-          <h2>Amenities</h2>
+          <h2 className='filter-bold-text'>Amenities</h2>
           <label>Furnished </label>{' '}
           <input type='checkbox' className='check'></input>
           <br />
@@ -49,14 +45,19 @@ export default class Filter extends Component {
           <input type='checkbox' className='check'></input> <br />
           <label>Shared Acomodation </label>{' '}
           <input type='checkbox' className='check'></input>
-          <h2>Budget</h2>
+          <h2 className='filter-bold-text'>Budget</h2>
           <label>Less than IDR.</label>
           {'      '} <input type='string' className='check'></input>
           <br />
-          <Button variant='primary' type='submit' className='btn-filter'>
-            Apply
-          </Button>
         </Form>
+        <Row style={{ marginTop: '20px' }}>
+          <Col xs={4}></Col>
+          <Col xs={8}>
+            <Button variant='primary' size='lg'>
+              APPLY
+            </Button>
+          </Col>
+        </Row>
       </Container>
     );
   }

@@ -2,42 +2,28 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Filter from '../compo/filternav';
 import Header from '../compo/header';
-import Data from '../compo/showcard';
-
-import ModalSignIn from '../compo/signmodal';
-import ModalSingUp from '../compo/modalsignup';
+import Content from '../compo/showContent';
+import Login from '../compo/login';
 
 export default class Home extends Component {
-  state = {
-    modalSign: false,
-    modalSingUp: false,
-  };
+  constructor() {
+    super();
+  }
 
   render() {
     return (
       <>
-        <Header
-          signInClick={() => this.setState({ modalSign: true })}
-          signUpClick={() => this.setState({ modalSingUp: true })}
-        />
-        <Container fluid>
+        <Login />
+        <Container fluid style={{ marginTop: '100px' }}>
           <Row>
             <Col md={3}>
               <Filter />
             </Col>
             <Col md={9}>
-              <Data />
+              <Content />
             </Col>
           </Row>
         </Container>
-        <ModalSignIn
-          visible={this.state.modalSign}
-          onClose={() => this.setState({ modalSign: false })}
-        />
-        <ModalSingUp
-          visible={this.state.modalSingUp}
-          onClose={() => this.setState({ modalSingUp: false })}
-        />
       </>
     );
   }
