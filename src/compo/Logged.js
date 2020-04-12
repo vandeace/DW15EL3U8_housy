@@ -15,7 +15,6 @@ import Ticket from '../pic/dropdown user/Ticket.png';
 import Bill from '../pic/dropdown user/Bill.png';
 import Logout from '../pic/dropdown user/Logout.png';
 import { Link } from 'react-router-dom';
-import Header from './header';
 
 export default class Login extends Component {
   logout = () => {
@@ -58,12 +57,14 @@ export default class Login extends Component {
                   </Link>
                 </Dropdown.Item>
                 <Dropdown.Item href=''>
-                  <Link to='./booking'>
+                  <Link to='/booking'>
                     <img src={Ticket}></img>
                   </Link>
                 </Dropdown.Item>
                 <Dropdown.Item href=''>
-                  <img src={Bill}></img>
+                  <Link to='/history'>
+                    <img src={Bill}></img>
+                  </Link>
                 </Dropdown.Item>
                 <Dropdown.Item href=''>
                   <img src={Logout} onClick={this.logout}></img>
