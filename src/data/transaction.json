@@ -1,0 +1,39 @@
+{
+  "transaction": [
+    {
+      "no": "1",
+      "nama": "Jafar Ganteng",
+      "typerent": "Year",
+      "bukti": "Bni.jpg",
+      "status": "Approved"
+    },
+    {
+      "no": "2",
+      "nama": "Sidik Pinter",
+      "typerent": "Month",
+      "bukti": "Mandiri.jpg",
+      "status": "Approved"
+    },
+    {
+      "no": "3",
+      "nama": "Lucky Ganteng",
+      "typerent": "Year",
+      "bukti": "Bca.jpg",
+      "status": "Pending"
+    },
+    {
+      "no": "4",
+      "nama": "Jonathan Pinter",
+      "typerent": "Year",
+      "bukti": "Bni.jpg",
+      "status": "Cancel"
+    },
+    {
+      "no": "5",
+      "nama": "Radif Ganteng",
+      "typerent": "Year",
+      "bukti": "Mandiri.jpg",
+      "status": "Approved"
+    }
+  ]
+}

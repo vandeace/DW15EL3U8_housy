@@ -8,7 +8,6 @@ import Status from '../pic/status.png';
 import Gender from '../pic/gender.png';
 import Telp from '../pic/telp.png';
 import Address from '../pic/address.png';
-import Header from './header';
 
 export default class Profile extends Component {
   state = {
@@ -46,7 +45,7 @@ export default class Profile extends Component {
                   md={1}
                   style={{ paddingTop: '10px', marginBottom: '30px' }}
                 >
-                  <img src={User}></img>
+                  <img src={User} alt=''></img>
                 </Col>
                 <Col md={6} style={{ marginLeft: '20px' }}>
                   <Row style={{ fontSize: 'Large' }}>Jafar Sidik</Row>
@@ -58,7 +57,7 @@ export default class Profile extends Component {
                   md={1}
                   style={{ paddingTop: '10px', marginBottom: '30px' }}
                 >
-                  <img src={Email}></img>
+                  <img src={Email} alt=''></img>
                 </Col>
                 <Col md={6} style={{ marginLeft: '20px' }}>
                   <Row style={{ fontSize: 'Large' }}>jafar@ganteng.com</Row>
@@ -70,13 +69,11 @@ export default class Profile extends Component {
                   md={1}
                   style={{ paddingTop: '10px', marginBottom: '30px' }}
                 >
-                  <img src={Pass}></img>
+                  <img src={Pass} alt=''></img>
                 </Col>
                 <Col md={6} style={{ marginLeft: '20px' }}>
                   <Row style={{ fontSize: 'Large' }}>
-                    <a>
-                      <label onClick={this.showModal}>Change Password</label>
-                    </a>
+                    <label onClick={this.showModal}>Change Password</label>
                   </Row>
                   <Row style={{ fontSize: 'Small' }}>Password</Row>
                 </Col>
@@ -86,7 +83,7 @@ export default class Profile extends Component {
                   md={1}
                   style={{ paddingTop: '10px', marginBottom: '30px' }}
                 >
-                  <img src={Status}></img>
+                  <img src={Status} alt=''></img>
                 </Col>
                 <Col md={6} style={{ marginLeft: '20px' }}>
                   <Row style={{ fontSize: 'Large' }}>Tenant</Row>
@@ -98,7 +95,7 @@ export default class Profile extends Component {
                   md={1}
                   style={{ paddingTop: '10px', marginBottom: '30px' }}
                 >
-                  <img src={Gender}></img>
+                  <img src={Gender} alt=''></img>
                 </Col>
                 <Col md={6} style={{ marginLeft: '20px' }}>
                   <Row style={{ fontSize: 'Large' }}>Male</Row>
@@ -110,7 +107,7 @@ export default class Profile extends Component {
                   md={1}
                   style={{ paddingTop: '10px', marginBottom: '30px' }}
                 >
-                  <img src={Telp}></img>
+                  <img src={Telp} alt=''></img>
                 </Col>
                 <Col md={6} style={{ marginLeft: '20px' }}>
                   <Row style={{ fontSize: 'Large' }}>08123456789</Row>
@@ -122,7 +119,7 @@ export default class Profile extends Component {
                   md={1}
                   style={{ paddingTop: '10px', marginBottom: '30px' }}
                 >
-                  <img src={Address}></img>
+                  <img src={Address} alt=''></img>
                 </Col>
                 <Col md={6} style={{ marginLeft: '20px' }}>
                   <Row style={{ fontSize: 'Large' }}>Pekanbaru</Row>
@@ -134,6 +131,7 @@ export default class Profile extends Component {
           <div>
             <img
               src={Photo}
+              alt=''
               style={{
                 width: '280px',
                 height: '345px',

@@ -7,8 +7,6 @@ import {
   Container,
   FormControl,
   Button,
-  Dropdown,
-  DropdownButton,
   Modal,
 } from 'react-bootstrap';
 import '../style/header.css';

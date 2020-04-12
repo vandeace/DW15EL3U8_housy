@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Alert, Button } from 'react-bootstrap';
+import { Container, Row, Col, Alert } from 'react-bootstrap';
 import Logo from '../pic/Icon.png';
 import Payment from 'qrcode.react';
 

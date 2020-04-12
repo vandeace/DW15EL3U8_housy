@@ -24,6 +24,7 @@ export default class Showproperty extends Component {
               <img
                 src={item.picture1}
                 style={{ width: '100%', height: '250px' }}
+                alt=''
               ></img>
             </Col>
           </Row>

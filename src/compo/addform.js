@@ -1,100 +1,119 @@
 import React, { Component } from 'react';
-import { Form, DropdownButton } from 'react-bootstrap';
-import { Dropdown } from 'semantic-ui-react';
+import { Form, Button, Row, Col } from 'react-bootstrap';
 
 export default class Addform extends Component {
-  state = {
-    city: [
-      {
-        key: 'Pekanbaru',
-        text: 'Pekanbaru',
-        value: 'Pekanbaru',
-      },
-      {
-        key: 'Padang',
-        text: 'Padang',
-        value: 'Padang',
-      },
-      {
-        key: 'Jambi',
-        text: 'Jambi',
-        value: 'Jambi',
-      },
-    ],
-  };
-
   render() {
     return (
       <div>
         <div>
           <Form>
-            <h1>Add Property</h1>
+            <Row>
+              <Col xs={4}></Col>
+              <Col xs={4}>
+                <h3>Add Property</h3>
+              </Col>
+              <Col xs={4}></Col>
+            </Row>
+
             <Form.Group>
               <Form.Group controlId='NameProperty'>
                 <Form.Label>Name Property</Form.Label>
-                <Form.Control type='text' placeholder='' />
+                <Form.Control
+                  type='text'
+                  style={{ backgroundColor: '#c8d2e3' }}
+                />
               </Form.Group>
-              <Form.Group>
+              <Form.Group controlId='typeRent'>
                 <Form.Label>City</Form.Label>
-                <div
-                  role='listbox'
-                  aria-expanded='false'
-                  class='ui fluid selection dropdown'
-                  tabindex='0'
+                <Form.Control
+                  as='select'
+                  required
+                  style={{ backgroundColor: '#c8d2e3' }}
                 >
-                  <div
-                    class='default text'
-                    role='alert'
-                    aria-live='polite'
-                    aria-atomic='true'
-                  >
-                    Select Friend
-                  </div>
-                  <i aria-hidden='true' class='dropdown icon'></i>
-                  <div class='menu transition'></div>
-                </div>
+                  <option>Pekanbaru</option>
+                  <option>Padang</option>
+                  <option>Jakarta</option>
+                  <option>Bandung</option>
+                  <option>Banten</option>
+                </Form.Control>
               </Form.Group>
               <Form.Group controlId='exampleForm.ControlTextarea1'>
                 <Form.Label>Address</Form.Label>
-                <Form.Control as='textarea' rows='3' />
+                <Form.Control
+                  as='textarea'
+                  rows='3'
+                  style={{ backgroundColor: '#c8d2e3' }}
+                />
               </Form.Group>
               <Form.Group controlId='Price'>
                 <Form.Label>Price</Form.Label>
-                <Form.Control type='text' placeholder='' />
+                <Form.Control
+                  type='text'
+                  style={{ backgroundColor: '#c8d2e3' }}
+                />
               </Form.Group>
-              <Form.Group>
-                <Form.Label>Type Of Rent</Form.Label>
-                <DropdownButton>
-                  <Dropdown.Item>Year</Dropdown.Item>
-                </DropdownButton>
+              <Form.Group controlId='typeRent'>
+                <Form.Label>Type of Rent</Form.Label>
+                <Form.Control
+                  as='select'
+                  style={{ backgroundColor: '#c8d2e3' }}
+                  required
+                >
+                  <option>Year</option>
+                  <option>Month</option>
+                  <option>Day</option>
+                </Form.Control>
               </Form.Group>
               <Form.Group>
                 <Form.Label>Amenities</Form.Label>
-                <Form.Check type='checkbox' label='Furnished' />
-                <Form.Check type='checkbox' label='Pet Allowed' />
-                <Form.Check type='checkbox' label='Shared Acomodation' />
+                <Row>
+                  <Col xs={4}>
+                    <Form.Check type='checkbox' label='Furnished' />
+                  </Col>
+                  <Col xs={4}>
+                    <Form.Check type='checkbox' label='Pet Allowed' />
+                  </Col>
+                  <Col xs={4}>
+                    <Form.Check type='checkbox' label='Shared Acomodation' />
+                  </Col>
+                </Row>
               </Form.Group>
-              <Form.Group>
+              <Form.Group controlId='typeRent'>
                 <Form.Label>Bedroom</Form.Label>
-                <DropdownButton>
-                  <Dropdown.Item>1</Dropdown.Item>
-                  <Dropdown.Item>2</Dropdown.Item>
-                  <Dropdown.Item>3</Dropdown.Item>
-                  <Dropdown.Item>4</Dropdown.Item>
-                  <Dropdown.Item>5</Dropdown.Item>
-                </DropdownButton>
+                <Form.Control
+                  as='select'
+                  required
+                  style={{ backgroundColor: '#c8d2e3' }}
+                >
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </Form.Control>
               </Form.Group>
-              <Form.Group>
+              <Form.Group controlId='typeRent'>
                 <Form.Label>Bathroom</Form.Label>
-                <DropdownButton>
-                  <Dropdown.Item>1</Dropdown.Item>
-                  <Dropdown.Item>2</Dropdown.Item>
-                  <Dropdown.Item>3</Dropdown.Item>
-                  <Dropdown.Item>4</Dropdown.Item>
-                  <Dropdown.Item>5</Dropdown.Item>
-                </DropdownButton>
+                <Form.Control
+                  as='select'
+                  style={{ backgroundColor: '#c8d2e3' }}
+                  required
+                >
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </Form.Control>
               </Form.Group>
             </Form.Group>
+            <Row>
+              <Col xs={4}></Col>
+              <Col xs={4}>
+                <Button variant='primary'>SAVE</Button>{' '}
+              </Col>
+              <Col xs={4}></Col>
+            </Row>
           </Form>
         </div>
       </div>

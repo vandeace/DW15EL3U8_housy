@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import '../style/content.css';
 
 export default class Content extends Component {
-  constructor() {
-    super();
-  }
   render() {
     const {
       picture,

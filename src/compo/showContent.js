@@ -6,10 +6,6 @@ import '../style/show.css';
 import { Link } from 'react-router-dom';
 
 export default class Cardroom extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <Container fluid className='content-bg'>

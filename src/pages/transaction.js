@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import Login from '../compo/login';
-import Property from '../compo/showproperty';
+import Data from '../compo/showtransaction';
 import { Container } from 'react-bootstrap';
 
-export default class property extends Component {
+export default class Transaction extends Component {
   render() {
     return (
       <div>
         <Login />
-        <Container fluid style={{ marginTop: '100px' }}>
-          <Property />
+        <Container fluid style={{ width: '80%', marginTop: '100px' }}>
+          <Data />
         </Container>
       </div>
     );

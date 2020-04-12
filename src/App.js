@@ -6,6 +6,7 @@ import Profile from './pages/profile';
 import Booking from './pages/booking';
 import History from './pages/history';
 import Property from './pages/property';
+import Transaction from './pages/transaction';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/booking' exact component={Booking} />
           <Route path='/history' exact component={History} />
           <Route path='/property' exact component={Property} />
+          <Route path='/transaction' exact component={Transaction} />
         </Switch>
       </Router>
     </div>
