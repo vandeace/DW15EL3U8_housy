@@ -7,6 +7,7 @@ import Booking from './pages/booking';
 import History from './pages/history';
 import Property from './pages/property';
 import Transaction from './pages/transaction';
+import HomeOwner from './pages/homeOwner';
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
           <Route path='/addproperty' exact component={AddProperty} />
           <Route path='/booking' exact component={Booking} />
           <Route path='/history' exact component={History} />
-          <Route path='/property' exact component={Property} />
+          <Route path='/property/:id' exact component={Property} />
           <Route path='/transaction' exact component={Transaction} />
+          <Route path='/homeOwner' exact component={HomeOwner} />
         </Switch>
       </Router>
     </div>

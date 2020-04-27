@@ -1,22 +1,40 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Col } from 'react-bootstrap';
 import Show from './content';
-import Data from '../data/data.json';
+import '../style/content.css';
 import '../style/show.css';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actHouse from '../_action/house';
 
-export default class Cardroom extends Component {
+class showContent extends Component {
+  componentDidMount() {
+    this.props.dispatch(actHouse.getHouses());
+  }
+
   render() {
+    const house = this.props.house;
+    const data = house.data.map((item, index) => (
+      <Link
+        to={`/property/${item.id}`}
+        style={{ textDecoration: 'none', color: 'black' }}
+        key={index}
+      >
+        <Show item={item} key={index} />
+      </Link>
+    ));
     return (
       <Container fluid className='content-bg'>
-        <Link to='/property'>
-          <div className='flex-container'>
-            {Data.Property.map((data, i) => (
-              <Show key={i} data={data} />
-            ))}
-          </div>
-        </Link>
+        <div className='flex-container'>{data}</div>
       </Container>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    house: state.house,
+  };
+};
+
+export default connect(mapStateToProps)(showContent);

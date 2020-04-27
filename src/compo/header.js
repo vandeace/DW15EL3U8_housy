@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import {
   Nav,
@@ -35,11 +36,11 @@ class Header extends Component {
     }
   };
 
-  handleLogin = () => {
-    const user = { email: this.state.email, password: this.state.password };
-    this.setState({ userData: user });
-    localStorage.setItem('auth', JSON.stringify(user));
-  };
+  // handleLogin = () => {
+  //   const user = { email: this.state.email, password: this.state.password };
+  //   this.setState({ userData: user });
+  //   localStorage.setItem('auth', JSON.stringify(user));
+  // };
 
   handleLogOut = () => {
     this.setState({ userData: null });
@@ -62,10 +63,27 @@ class Header extends Component {
     this.setState({ signUp: false });
   };
 
+  handleLogin = async () => {
+    try {
+      const user = await axios.post('http://localhost:5000/api/v1/login', {
+        email: this.state.email,
+        password: this.state.password,
+      });
+      const { data } = user.data;
+      localStorage.setItem('credentials', JSON.stringify(data));
+      localStorage.setItem('auth', 'true');
+      console.log(data.role);
+      window.location.reload(false);
+      this.setState({ signIn: false });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   render() {
     return (
       <Container fluid>
-        <Navbar className='justify-content-between' fixed='top'>
+        <Navbar className='justify-content-between'>
           <Navbar.Brand>
             <Link to='./'>
               <img src={Logo} alt=''></img>
@@ -186,7 +204,6 @@ class Header extends Component {
                 <Button
                   variant='primary'
                   style={{ display: 'flex', justifyContent: 'center' }}
-                  type='submit'
                   onClick={this.handleLogin}
                 >
                   SIGN IN

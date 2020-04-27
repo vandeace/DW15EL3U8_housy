@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Button, Modal, Form } from 'react-bootstrap';
-import Data from '../data/property.json';
 import * as moment from 'moment';
 import 'moment/locale/pt-br';
+import { connect } from 'react-redux';
 
-export default class Showproperty extends Component {
+class showProperty extends Component {
+  constructor(props) {
+    super(props);
+  }
   now = moment().format('LLLL');
   state = {
     book: false,
@@ -15,47 +18,54 @@ export default class Showproperty extends Component {
   closeModal = () => {
     this.setState({ book: false });
   };
+
+  // componentDidMount() {
+  //   const id = this.props.id;
+  //   console.log(typeof id);
+  //   const data = this.props.house.data;
+  //   console.log(data);
+  //   const property = data.filter((data) => data.id === id - 0)[0];
+  //   console.log(property);
+  //   property = this.state.property;
+  // }
+
   render() {
-    return Data.map((item) => (
+    const { id, house } = this.props;
+    const property = house.data.filter((value) => value.id === id - 0)[0];
+    console.log(property);
+    return (
       <div>
         <Container fluid style={{ width: '60%' }}>
           <Row>
             <Col xs={12}>
               <img
-                src={item.picture1}
-                style={{ width: '100%', height: '250px' }}
+                src=''
+                style={{ width: '1100px', height: '250px' }}
                 alt=''
               ></img>
             </Col>
           </Row>
           <Row style={{ marginTop: '20px' }}>
             <Col xs={4}>
-              <img src={item.picture2} alt=''></img>
+              <img src='' alt=''></img>
             </Col>
             <Col xs={4} style={{}}>
-              <img
-                src={item.picture3}
-                alt=''
-                style={{ paddingLeft: '12px' }}
-              ></img>
+              <img src='' alt='' style={{ paddingLeft: '12px' }}></img>
             </Col>
             <Col xs={4} style={{ paddingRight: '15px' }}>
-              <img
-                src={item.picture4}
-                alt=''
-                style={{ paddingLeft: '15px' }}
-              ></img>
+              <img src='' alt='' style={{ paddingLeft: '15px' }}></img>
             </Col>
           </Row>
           <Row style={{ marginTop: '20px' }}>
             <Col>
-              <h1>{item.name}</h1>
+              <h1></h1>
             </Col>
           </Row>
           <Row>
             <Col xs={4}>
-              <h3>{item.price}</h3>
-              <p>{item.location}</p>
+              <h3>{property.name}</h3>
+              <p>{property.city}</p>
+              <p>{property.address}</p>
             </Col>
             <Col xs={4}></Col>
             <Col>
@@ -72,13 +82,13 @@ export default class Showproperty extends Component {
               </Row>
               <Row xs={4}>
                 <Col xs={4}>
-                  <h6>{item.bedrooms}</h6>
+                  <h6>{property.bedroom}</h6>
                 </Col>
                 <Col xs={4}>
-                  <h6>{item.bathrooms}</h6>
+                  <h6>{property.bathroom}</h6>
                 </Col>
                 <Col xs={4}>
-                  <h6>{item.area}</h6>
+                  <h6>200ft</h6>
                 </Col>
               </Row>
             </Col>
@@ -86,7 +96,7 @@ export default class Showproperty extends Component {
           <Row style={{ marginLeft: '5px' }}>
             <h5>Description</h5>
           </Row>
-          <Row style={{ marginLeft: '5px' }}>{item.description}</Row>
+          <Row style={{ marginLeft: '5px' }}>lorem ipsum</Row>
           <Row>
             <Col xs={10}></Col>
             <Col>
@@ -120,6 +130,14 @@ export default class Showproperty extends Component {
           </Modal.Footer>
         </Modal>
       </div>
-    ));
+    );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    house: state.house,
+  };
+};
+
+export default connect(mapStateToProps)(showProperty);

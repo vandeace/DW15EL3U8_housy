@@ -8,11 +8,16 @@ import Status from '../pic/status.png';
 import Gender from '../pic/gender.png';
 import Telp from '../pic/telp.png';
 import Address from '../pic/address.png';
+import { connect } from 'react-redux';
+import * as actUser from '../_action/user';
 
-export default class Profile extends Component {
+class Profile extends Component {
   state = {
     modal: false,
   };
+
+  componentDidMount() {}
+
   showModal = () => {
     this.setState({ modal: true });
   };
@@ -21,6 +26,8 @@ export default class Profile extends Component {
   };
 
   render() {
+    const profile = this.props.users.data;
+    console.log(profile);
     return (
       <div>
         <div
@@ -48,7 +55,7 @@ export default class Profile extends Component {
                   <img src={User} alt=''></img>
                 </Col>
                 <Col md={6} style={{ marginLeft: '20px' }}>
-                  <Row style={{ fontSize: 'Large' }}>Jafar Sidik</Row>
+                  <Row style={{ fontSize: 'Large' }}>{profile.fullName}</Row>
                   <Row style={{ fontSize: 'Small' }}>Fullname</Row>
                 </Col>
               </Row>
@@ -60,7 +67,7 @@ export default class Profile extends Component {
                   <img src={Email} alt=''></img>
                 </Col>
                 <Col md={6} style={{ marginLeft: '20px' }}>
-                  <Row style={{ fontSize: 'Large' }}>jafar@ganteng.com</Row>
+                  <Row style={{ fontSize: 'Large' }}>{profile.email}</Row>
                   <Row style={{ fontSize: 'Small' }}>Email</Row>
                 </Col>
               </Row>
@@ -86,7 +93,7 @@ export default class Profile extends Component {
                   <img src={Status} alt=''></img>
                 </Col>
                 <Col md={6} style={{ marginLeft: '20px' }}>
-                  <Row style={{ fontSize: 'Large' }}>Tenant</Row>
+                  <Row style={{ fontSize: 'Large' }}>{profile.role}</Row>
                   <Row style={{ fontSize: 'Small' }}>Status</Row>
                 </Col>
               </Row>
@@ -98,7 +105,7 @@ export default class Profile extends Component {
                   <img src={Gender} alt=''></img>
                 </Col>
                 <Col md={6} style={{ marginLeft: '20px' }}>
-                  <Row style={{ fontSize: 'Large' }}>Male</Row>
+                  <Row style={{ fontSize: 'Large' }}>{profile.gender}</Row>
                   <Row style={{ fontSize: 'Small' }}>Gender</Row>
                 </Col>
               </Row>
@@ -122,7 +129,7 @@ export default class Profile extends Component {
                   <img src={Address} alt=''></img>
                 </Col>
                 <Col md={6} style={{ marginLeft: '20px' }}>
-                  <Row style={{ fontSize: 'Large' }}>Pekanbaru</Row>
+                  <Row style={{ fontSize: 'Large' }}>{profile.address}</Row>
                   <Row style={{ fontSize: 'Small' }}>Address</Row>
                 </Col>
               </Row>
@@ -180,3 +187,11 @@ export default class Profile extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    users: state.user,
+  };
+};
+
+export default connect(mapStateToProps)(Profile);

@@ -1,30 +1,107 @@
 .content-item {
-  width: 290px;
-  height: 240px;
+  width: 350px;
+  height: 300px;
 
   border: 3px solid rgba(196, 196, 196, 0.25);
   box-sizing: border-box;
   border-radius: 5px;
 
   margin: 20px;
+  text-decoration: none;
+}
+
+.content-item :hover {
+  text-decoration: none !important;
+}
+
+.content-tag-rect-1 {
+  position: relative;
+  width: 60px;
+  height: 20px;
+  left: -3px;
+  top: 15px;
+
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 9px;
+  line-height: 21px;
+
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+.content-tag-rect-2 {
+  position: relative;
+  width: 70px;
+  height: 20px;
+  left: -3px;
+  top: 15px;
+
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 9px;
+  line-height: 21px;
+
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+.content-tag-rect-3 {
+  position: relative;
+  width: 110px;
+  height: 20px;
+  left: 4px;
+  top: 15px;
+
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 9px;
+  line-height: 21px;
+
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
 }
 
 .content-image {
+  margin-top: 0px;
   position: relative;
-  width: 270px;
-  height: 160px;
+  width: 330px;
+  height: 200px;
   left: 7px;
   top: -12px;
 
   border-radius: 5px;
+  text-decoration: none;
 }
 
-.content-tag-rect {
+/* .content-tag-rect {
   position: relative;
-  width: 70px;
+  width: 150px;
   height: 20px;
   left: 15px;
   top: 15px;
+  text-decoration: none;
 
   background: #ffffff;
   border-radius: 3px;
@@ -40,9 +117,11 @@
   text-align: center;
 
   color: #000000;
-}
+} */
 
 .content-info-1 {
+  margin-top: 10px;
+  color: #000000;
   position: relative;
   left: 10px;
   top: -7px;
@@ -51,9 +130,13 @@
   font-style: normal;
   font-weight: 800;
   font-size: 13px;
+  text-decoration: none;
+  text-transform: capitalize;
 }
 
 .content-info-2 {
+  margin-top: 20px;
+  color: #000000;
   position: relative;
   left: 10px;
   top: -25px;
@@ -61,9 +144,11 @@
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-size: 12px;
+  text-transform: capitalize;
 }
 
 .content-info-3 {
+  margin-top: 20px;
   position: relative;
   left: 10px;
   top: -42px;
@@ -71,6 +156,7 @@
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-size: 12px;
+  text-transform: capitalize;
 
   color: #a8a8a8;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Login from '../compo/login';
-import History from '../compo/historydata';
+import History from '../compo/history';
 import { Container } from 'react-bootstrap';
 
 export default class history extends Component {
